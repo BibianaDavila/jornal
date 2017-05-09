@@ -1,115 +1,109 @@
-<!DOCTYPE html>
-<html lang=pt>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jornal | Mídia Impressa</title>
+  <meta name="description" content="Quizy jquery plugin for creating memory game (concentration gaim, pairs game)">
+  <meta name="keywords" content="jquery plugin, memory game, concentration, pairs game, javascript, jquery" />
 
-		<title>Jornal | Mídia Impressa</title>
+  <meta name="viewport" content="width=device-width">
+  
+  <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="css/quizymemorygame.css">
+  <link rel="stylesheet" href="css/main.css">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container-custom">
+      <img src="img/icon.png" class="logo-img"/>
+      <div class="text">jornal</div>
+    </div>
+  </header>
 
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</head>
+  <div id="main" role="main">
+    
+    <div class="overlay"></div>
 
-	<body>
+    <div id="tutorial-memorygame" class="quizy-memorygame">
+      <ul>
+          <li class="match1">
+            <img src="img/press.png">
+          </li>
+          <li class="match2">
+            <br><br><p class="text-style1">Importante <br/><i>Penny Paper</i></p>
+          </li>
+          <li class="match3">
+            <img src="img/watergate.png">
+          </li>
+          <li class="match4">
+            <img src="img/gazeta.png">
+          </li>
+          <li class="match5">
+            <img src="img/tv.png">
+          </li>
+          <li class="match6">
+           <img src="img/tablet.png">
+          </li>
+          <li class="match1">
+            <img src="img/gutenberg.png">
+          </li>
+          <li class="match2">
+            <img src="img/thesun.png">
+          </li>
+          <li class="match3">
+            <img src="img/waterteam.png">
+          </li>
+          <li class="match4">
+            <br/><br><p class="text-style1">Primeiro <br/>jornal impresso <br/>no Brasil</p>
+          </li>
+          <li class="match5">
+            <br><br><p class="text-style1">Causou uma revolução no design dos jornais</p>
+          </li>
+          <li class="match6">
+            <br><br><p class="text-style1">Recebeu um Global Media Awards por inovação</p>
+          </li>
+      </ul>      
+    </div>
 
-	  <!--=== home! ===-->
-	  <section id="home">
-	    <article>
-	      <div class="container">
-	      	<div class="title">
-	    	    <p>jornal</p>
-	    	    <div class="separator"></div>
-	    	    <div class="subtitle">
-	    	    	Publicação periódica, geralmente diária, que contém notícias.
-	    	  	  <br/>ex.: <i>folha, gazeta, periódico.</i>
-	    	    </div>
-	    	  </div>   	
+    <div class="reset-button">
+      <hr/>
+      Encontre os pares corretos: clique nas imagens para jogar. <a id="restart" href=""> <div class="reset-icon"></div> Restart </a>
+    </div>
+  </div>
 
-	    	</div>
-	    </article>
-	  </section>
 
-	  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" id="trans-1">
-      <polygon points="100 0 100 10 0 10" />
-    </svg>
+  <footer>
+    <div class="container-custom">
+ 
+      <div class="logo-fabico">
+        <img src="img/fabico.png" class=""/>
+      </div> 
 
-    <section id="timeline">
-	    <article>
-        <div class="container">
+        <div class="info">
+          <br/>
+          <p>2017. Disciplina de Mídia Impressa</p>
+          <p>Por Bibiana Davila, baseado no plugin <a href="http://memorygame.quizyplugin.com/" target="_blank">jQuery Memory Card.</p>
+        </div>
+    
+    </div>
+  </footer>
+  
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+  
+  <script src="js/jquery.flip.min.js"></script>
+  <script src="js/jquery.quizymemorygame.js"></script>
+  
+  <script>
+    var quizyParams = {itemWidth: 156, itemHeight: 156, itemsMargin:40, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, randomised:true }; 
+    $('#tutorial-memorygame').quizyMemoryGame(quizyParams);
+    $('#restart').click(function(){
+      $('#tutorial-memorygame').quizyMemoryGame('restart');
+      return false;
+    });
+  </script>
 
-	        <div class="section-title text-left">
-	          <h1>linha do tempo</h1> 	  
-	        </div>
-
-	      </div>
-	    </article>
-	  </section>		
-
-	  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" id="trans-2">
-      <polygon points="100 0 0 0 100 10" />
-    </svg>
-
-    <section id="design">
-	    <article>
-        <div class="container">
-
-	        <div class="section-title text-right">
-	          <h1>evolução gráfica</h1> 	  
-	        </div>
-
-	      </div>
-	    </article>
-	  </section>	
-
-	  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" id="trans-3">
-      <polygon points="100 0 100 10 0 10" />
-    </svg>	
-
-	  <section id="cases">
-	    <article>
-        <div class="container">
-
-	        <div class="section-title text-center invert">
-	          <h1>casos de sucesso</h1> 	  
-	        </div>
-
-	      </div>
-	    </article>
-	  </section>		
-
-	  <section id="future">
-	    <article>
-        <div class="container">
-
-	        <div class="section-title text-center">
-	          <h1>futuro do jornal</h1> 	  
-	        </div>
-
-	      </div>
-	    </article>
-	  </section>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" id="trans-4">
-      <polygon points="100 10 100 0 0 0" />
-    </svg>
-
-	  <section id="end">
-	    <article>
-        <div class="container">
-
-	        <div class="section-title text-right invert">
-	          <h1>the end</h1> 	  
-	        </div>
-
-	      </div>
-	    </article>
-	  </section>
-
-	</body>
+</body>
 </html>

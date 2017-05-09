@@ -1,6 +1,56 @@
 body{
   font-family: 'Vidaloka', serif;
   text-align: center;
+  margin: 0px;
+}
+a{
+  color: #ca393c;
+  text-decoration: none;
+}
+header{
+  height: 80px;
+  background: #1f3444;
+  text-align: left;
+  margin-bottom: 80px;
+  border-bottom:10px solid #7c8286;
+}
+
+header .logo-img{
+  width: 75PX;
+  margin-top: 30px;
+}
+header .text{
+  display: inline-block;
+  vertical-align: top;
+  padding: 45px 5px;
+  font-size: 32PX;
+  color: #FFF;
+  text-shadow: 5px 2px 7px #1f3444;
+}
+footer{ 
+  position: relative;
+  bottom: 0px;
+  margin-top: 30px;
+  padding-top: 10px;
+  height: 90px;
+  width: 100%;
+  background: #1f3444;
+}
+
+footer .info{
+  text-align: right;
+  font-size: 12px;
+  font-family: 'Trebuchet MS';
+  font-weight: normal;
+  color: white;
+}
+footer .logo-fabico{
+  float: right;
+  padding: 0px 10px;
+}
+
+hr{
+  border: 1px solid #1f3444;
 }
 
 section{
@@ -21,6 +71,10 @@ section article{
   border: 1px solid white;
 }
 
+.container-custom{
+  width: 90%;
+  margin: auto;
+}
 /*=== Home ===*/
 #home{
   min-height: 100vh;
@@ -106,8 +160,10 @@ section article{
 /*==== Jogo da Memória ====*/
 body.overlay .overlay{
   background-color: rgba(218, 206, 206, 0.83);
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -117,10 +173,10 @@ body.overlay .overlay{
 
 .reset-button{
   width: 745px;
-  margin: 15px auto;
+  margin: 15px auto 60px auto;
   text-align: left;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  color: #182a38;
 }
 .reset-button a{
   vertical-align: middle;
