@@ -3,11 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Jornal | Mídia Impressa</title>
-  <meta name="description" content="Quizy jquery plugin for creating memory game (concentration gaim, pairs game)">
-  <meta name="keywords" content="jquery plugin, memory game, concentration, pairs game, javascript, jquery" />
-
-  <meta name="viewport" content="width=device-width">
-  
+   
   <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
 
   <link rel="stylesheet" href="css/quizymemorygame.css">
@@ -70,6 +66,8 @@
     <div class="reset-button">
       <hr/>
       Encontre os pares corretos: clique nas imagens para jogar. <a id="restart" href=""> <div class="reset-icon"></div> Restart </a>
+	  <br/>
+	  Muito difícil? Descubra as respostas <a href="https://prezi.com/p/zhb490ww5w3-/" target="_blank">aqui</a>. 
     </div>
   </div>
 
