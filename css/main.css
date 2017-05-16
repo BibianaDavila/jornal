@@ -205,3 +205,16 @@ body.overlay .overlay{
   margin:0;
   line-height:24pt;
 }
+
+@media (min-height: 900px){
+  footer{
+    position: fixed;
+  }
+}
+
+
+@media (max-width: 768px){
+  footer{
+    position: fixed;
+  }
+}
